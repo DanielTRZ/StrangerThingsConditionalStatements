@@ -18,6 +18,7 @@ document.getElementById('lang-pl').addEventListener('click', () => {
     setLanguage(currentLanguage);
     document.getElementById('lang-pl').classList.add('active');
     document.getElementById('lang-en').classList.remove('active');
+    clearDynamicContent();
 });
 
 document.getElementById('lang-en').addEventListener('click', () => {
@@ -25,7 +26,17 @@ document.getElementById('lang-en').addEventListener('click', () => {
     setLanguage(currentLanguage);
     document.getElementById('lang-en').classList.add('active');
     document.getElementById('lang-pl').classList.remove('active');
+    clearDynamicContent();
 });
+
+function clearDynamicContent() {
+    document.getElementById('wynik').textContent = '';
+    document.getElementById('wynik2').textContent = '';
+    document.getElementById('wynik3').textContent = '';
+    document.getElementById('losowy').textContent = '';
+    document.getElementById('wynikGra').textContent = '';
+    nowePytanie();
+}
 
 // --- Twoje funkcje ---
 function sprawdzLiczbe() {
