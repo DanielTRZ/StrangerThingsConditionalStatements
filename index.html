@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Instrukcje Warunkowe – Stranger Things Edition</title>
+    <title data-lang="title">Instrukcje Warunkowe – Stranger Things Edition</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -11,23 +11,27 @@
     <div id="particles-container"></div>
 
     <header class="header">
-        <h1 class="title">Instrukcje Warunkowe</h1><br>
-        <h2 class="subtitle">Stranger Things Edition</h2>
+        <h1 class="title" data-lang="main-title">Instrukcje Warunkowe</h1><br>
+        <h2 class="subtitle" data-lang="subtitle">Stranger Things Edition</h2>
     </header>
 
     <section class="blok">
-        <h2 class="naglowek">Podstawowe Instrukcje</h2>
+        <div class="language-switcher">
+            <button id="lang-pl" class="lang-btn active">Polski</button>
+            <h2 class="naglowek" data-lang="basic-instructions">Podstawowe Instrukcje</h2>
+            <button id="lang-en" class="lang-btn">English</button>
+        </div>
         <div class="karta">
-            <h3 class="card-title">Jeżeli (IF)</h3>
-            <pre class="code st-stranger">
+            <h3 class="card-title" data-lang="if-title">Jeżeli (IF)</h3>
+            <pre class="code st-stranger" data-lang="if-example">
 JEŻELI temperatura większa od 30
     wypisz: jest gorąco
             </pre>
         </div>
 
         <div class="karta">
-            <h3 class="card-title">Jeżeli – inaczej (IF – ELSE)</h3>
-            <pre class="code st-stranger">
+            <h3 class="card-title" data-lang="if-else-title">Jeżeli – inaczej (IF – ELSE)</h3>
+            <pre class="code st-stranger" data-lang="if-else-example">
 JEŻELI użytkownik zalogowany
     wyświetl: witaj
 W PRZECIWNYM RAZIE
@@ -36,8 +40,8 @@ W PRZECIWNYM RAZIE
         </div>
 
         <div class="karta">
-            <h3 class="card-title">Jeżeli – inaczej jeśli – inaczej (IF – ELSE IF – ELSE)</h3>
-            <pre class="code st-stranger">
+            <h3 class="card-title" data-lang="if-else-if-else-title">Jeżeli – inaczej jeśli – inaczej (IF – ELSE IF – ELSE)</h3>
+            <pre class="code st-stranger" data-lang="if-else-if-else-example">
 JEŻELI liczba mniejsza od 0
     wypisz: ujemna
 W PRZECIWNYM RAZIE JEŻELI liczba większa od 0
@@ -49,53 +53,54 @@ W PRZECIWNYM RAZIE
     </section>
 
     <section class="blok">
-        <h2 class="naglowek">Ćwiczenia Interaktywne</h2>
+        <h2 class="naglowek" data-lang="interactive-exercises">Ćwiczenia Interaktywne</h2>
 
         <div class="karta">
-            <h3 class="card-title">Sprawdź liczbę</h3>
-            <input id="liczbaInput" type="number" class="inp" placeholder="Wpisz liczbę">
-            <button onclick="sprawdzLiczbe()" class="btn">Sprawdź</button>
+            <h3 class="card-title" data-lang="check-number">Sprawdź liczbę</h3>
+            <input id="liczbaInput" type="number" class="inp" placeholder="Wpisz liczbę" data-lang-placeholder="enter-number">
+            <button onclick="sprawdzLiczbe()" class="btn" data-lang="check-button">Sprawdź</button>
             <div id="wynik" class="wynik"></div>
         </div>
 
         <div class="karta">
-            <h3 class="card-title">Sprawdź dostęp</h3>
-            <input id="wiek" type="number" class="inp" placeholder="Wiek">
+            <h3 class="card-title" data-lang="check-access">Sprawdź dostęp</h3>
+            <input id="wiek" type="number" class="inp" placeholder="Wiek" data-lang-placeholder="age">
             <label class="label st-stranger-label"><br>
-                <input id="dokument" type="checkbox"> Mam dokument
+                <input id="dokument" type="checkbox"> <span data-lang="have-document">Mam dokument</span>
             </label>
-            <button onclick="sprawdzDostep()" class="btn">Sprawdź</button>
+            <button onclick="sprawdzDostep()" class="btn" data-lang="check-button">Sprawdź</button>
             <div id="wynik2" class="wynik"></div>
         </div>
 
         <div class="karta">
-            <h3 class="card-title">Imię</h3>
-            <input id="imieInput" type="text" class="inp" placeholder="Podaj imię">
-            <button onclick="sprawdzImie()" class="btn">Sprawdź</button>
+            <h3 class="card-title" data-lang="name">Imię</h3>
+            <input id="imieInput" type="text" class="inp" placeholder="Podaj imię" data-lang-placeholder="enter-name">
+            <button onclick="sprawdzImie()" class="btn" data-lang="check-button">Sprawdź</button>
             <div id="wynik3" class="wynik"></div>
         </div>
     </section>
 
     <section class="blok">
-        <h2 class="naglowek">Tryb Losowy & Mini-gra</h2>
+        <h2 class="naglowek" data-lang="random-mode-minigame">Tryb Losowy & Mini-gra</h2>
 
         <div class="karta">
-            <h3 class="card-title">Generator losowego warunku</h3>
-            <button onclick="losowyWarunek()" class="btn">Wygeneruj</button>
+            <h3 class="card-title" data-lang="random-condition-generator">Generator losowego warunku</h3>
+            <button onclick="losowyWarunek()" class="btn" data-lang="generate-button">Wygeneruj</button>
             <div id="losowy" class="wynik"></div>
         </div>
 
         <div class="karta">
-            <h3 class="card-title">Mini gra: Odgadnij wynik IF</h3>
+            <h3 class="card-title" data-lang="minigame-guess-if">Mini gra: Odgadnij wynik IF</h3>
             <div id="pytanie" class="pytanie st-stranger-question"></div>
-            <button onclick="sprawdzGreButton(true)" class="btn">Prawda</button>
-            <button onclick="sprawdzGreButton(false)" class="btn">Fałsz</button>
+            <button onclick="sprawdzGreButton(true)" class="btn" data-lang="true-button">Prawda</button>
+            <button onclick="sprawdzGreButton(false)" class="btn" data-lang="false-button">Fałsz</button>
             <div id="wynikGra" class="wynik"></div>
         </div>
     </section>
 
     <footer class="footer">Daniel Trzeciński 2025</footer>
 
+    <script src="Language/translation.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
