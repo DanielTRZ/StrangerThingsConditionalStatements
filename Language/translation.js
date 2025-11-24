@@ -5,20 +5,66 @@ const translations = {
         'subtitle': 'Stranger Things Edition',
         'basic-instructions': 'Podstawowe Instrukcje',
         'if-title': 'Jeżeli (IF)',
-        'if-example': `JEŻELI temperatura większa od 30
-    wypisz: jest gorąco`,
+        'if-example': `==========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+ ==========================================
+
+# Sprawdzenie temperatury
+
+JEŻELI temperatura jest większa niż 30
+    WYŚWIETL: "
+        🔥 UWAGA! 🔥
+        Gorąco jak w Upside Down...
+        Czerwone cienie tańczą wokół Ciebie!
+    "
+
+JEŻELI temperatura jest większa lub równa 20 i temperatura jest mniejsza lub równa 30
+    WYŚWIETL: "
+        🌫️ Normalny świat...
+        Ciepło, ale Hawkins jeszcze spokojne.
+    "
+JEŻELI temperatura jest mniejsza niż 20
+    WYŚWIETL: "
+        ❄️ Mróz nadchodzi!
+        Cienie w Upside Down robią się większe...`,
         'if-else-title': 'Jeżeli – inaczej (IF – ELSE)',
-        'if-else-example': `JEŻELI użytkownik zalogowany
-    wyświetl: witaj
+        'if-else-example': `===========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+===========================================
+
+# Sprawdzenie logowania użytkownika
+
+JEŻELI użytkownik jest zalogowany
+    WYŚWIETL: "
+        👋 Witaj w Hawkins!
+        Cienie są dziś łagodne...
+    "
 W PRZECIWNYM RAZIE
-    wyświetl: dostęp zabroniony`,
+    WYŚWIETL: "
+        ⛔ Dostęp zabroniony!
+        Upside Down zaczyna wkraczać do świata realnego...`,
         'if-else-if-else-title': 'Jeżeli – inaczej jeśli – inaczej (IF – ELSE IF – ELSE)',
-        'if-else-if-else-example': `JEŻELI liczba mniejsza od 0
-    wypisz: ujemna
-W PRZECIWNYM RAZIE JEŻELI liczba większa od 0
-    wypisz: dodatnia
+        'if-else-if-else-example': `===========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+===========================================
+
+# Sprawdzenie znaku liczby
+
+JEŻELI liczba jest mniejsza niż 0
+    WYŚWIETL: "
+        ❌ Liczba ujemna...
+        Cienie w Upside Down stają się gęstsze!
+    "
+W PRZECIWNYM RAZIE JEŻELI liczba jest większa niż 0
+    WYŚWIETL: "
+        ✅ Liczba dodatnia!
+        Światło Hawkins przebija mrok...
+    "
 W PRZECIWNYM RAZIE
-    wypisz: zero`,
+    WYŚWIETL: "
+        0 — Zero...
+        Cienie wstrzymują oddech, nic się nie dzieje...
+    "`,
         'interactive-exercises': 'Ćwiczenia Interaktywne',
         'check-number': 'Sprawdź liczbę',
         'enter-number': 'Wpisz liczbę',
@@ -58,20 +104,66 @@ W PRZECIWNYM RAZIE
         'subtitle': 'Stranger Things Edition',
         'basic-instructions': 'Basic Instructions',
         'if-title': 'If',
-        'if-example': `IF temperature is greater than 30
-    print: it's hot`,
+        'if-example': `==========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+ ==========================================
+
+# Checking the temperature
+
+IF the temperature is greater than 30
+    DISPLAY: "
+        🔥 WARNING! 🔥
+        Hot as in the Upside Down...
+        Red shadows are dancing around you!
+    "
+
+IF the temperature is greater than or equal to 20 AND the temperature is less than or equal to 30
+    DISPLAY: "
+        🌫️ Normal world...
+        Warm, but Hawkins is still calm.
+    "
+IF the temperature is less than 20
+    DISPLAY: "
+        ❄️ Frost is coming!
+        The shadows in the Upside Down are getting bigger...`,
         'if-else-title': 'If – Else',
-        'if-else-example': `IF user is logged in
-    display: welcome
+        'if-else-example': `===========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+===========================================
+
+# Checking user login
+
+IF the user is logged in
+    DISPLAY: "
+        👋 Welcome to Hawkins!
+        The shadows are gentle today...
+    "
 ELSE
-    display: access denied`,
+    DISPLAY: "
+        ⛔ Access denied!
+        The Upside Down is starting to enter the real world...`,
         'if-else-if-else-title': 'If – Else If – Else',
-        'if-else-if-else-example': `IF number is less than 0
-    print: negative
-ELSE IF number is greater than 0
-    print: positive
+        'if-else-if-else-example': `===========================================
+  TERMINAL HAWKINS – UPSIDE DOWN
+===========================================
+
+# Checking the sign of the number
+
+IF the number is less than 0
+    DISPLAY: "
+        ❌ Negative number...
+        The shadows in the Upside Down are getting denser!
+    "
+ELSE IF the number is greater than 0
+    DISPLAY: "
+        ✅ Positive number!
+        The light of Hawkins pierces the darkness...
+    "
 ELSE
-    print: zero`,
+    DISPLAY: "
+        0 — Zero...
+        The shadows hold their breath, nothing is happening...
+    "`,
         'interactive-exercises': 'Interactive Exercises',
         'check-number': 'Check number',
         'enter-number': 'Enter a number',
