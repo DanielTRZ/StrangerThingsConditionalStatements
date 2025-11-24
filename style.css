@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #000000, #120008, #000000);
+    font-family: Arial, sans-serif;
+    color: #d6d6d6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ff003c;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(110vh); }
+}
+
+/* Reszta stylu */
+.header { text-align: center; padding: 40px 0; z-index: 1; position: relative; }
+.title { font-family: 'Cinzel Decorative', serif; font-size: 60px; color: #ff0015; text-shadow: 0 0 20px #ff093f, 0 0 40px #b4001f; animation: flicker 2.5s infinite; display: inline-block; }
+.subtitle { color: #b3b3b3; margin-top: 10px; font-family: 'Cinzel Decorative', serif; font-size: 35px; text-shadow: 0 0 15px #ff003c; display: inline-block; }
+.blok { width: 90%; max-width: 900px; margin: 50px auto; z-index: 1; position: relative; }
+.naglowek { font-family: 'Cinzel Decorative', serif; color: #ff093f; text-shadow: 0 0 15px #ff003c; border-bottom: 2px solid #ff003c; padding-bottom: 10px; margin-bottom: 30px; text-align: center; }
+.karta { background: rgba(20, 0, 10, 0.6); padding: 20px; margin: 25px 0; border-left: 3px solid #ff003c; border-radius: 4px; box-shadow: 0 0 20px rgba(255, 0, 40, 0.2); z-index: 1; position: relative; font-family: 'Cinzel Decorative', serif; }
+.card-title { font-family: 'Cinzel Decorative', serif; color: #ff3c70; font-size: 24px; text-shadow: 0 0 10px #ff003c; margin-bottom: 10px; }
+.code.st-stranger { background: rgba(0,0,0,0.6); padding: 15px; border-radius: 4px; color: #ff3c70; border-left: 4px solid #ff003c; font-size: 16px; font-family: 'Cinzel Decorative', serif; text-shadow: 0 0 10px #ff003c; animation: flicker 2.5s infinite; }
+.inp { width: 100%; padding: 10px; margin-top: 10px; background: #1b0a12; border: 1px solid #ff003c; color: white; border-radius: 4px; }
+.inp:focus { outline: none; box-shadow: 0 0 15px #ff003c; }
+.btn { width: 100%; padding: 12px; margin-top: 15px; background: #ff003c; border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer; box-shadow: 0 0 10px #ff003c; transition: 0.2s; text-shadow: 0 0 10px #ff003c;}
+.btn:hover { background: #ff204f; box-shadow: 0 0 20px #ff003c;  }
+.wynik { margin-top: 15px; font-size: 20px; font-weight: bold; margin-left: 10px;  }
+.st-stranger-question { font-family: 'Cinzel Decorative', serif; font-size: 18px; margin-bottom: 10px; color: #ff3c70 ; color: floralwhite ;  text-shadow: 0 0 10px #ff003c; }
+.footer { text-align: center; margin: 50px 0 20px 0; font-family: 'Cinzel Decorative', serif; color: #ff3c70; text-shadow: 0 0 10px #ff003c; font-size: 18px; }
+
+@keyframes flicker { 0%,100%

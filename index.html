@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrukcje Warunkowe – Stranger Things Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Efekt spadających cząsteczek -->
+    <div id="particles-container"></div>
+
+    <header class="header">
+        <h1 class="title">Instrukcje Warunkowe</h1><br>
+        <h2 class="subtitle">Stranger Things Edition</h2>
+    </header>
+
+    <section class="blok">
+        <h2 class="naglowek">Podstawowe Instrukcje</h2>
+        <div class="karta">
+            <h3 class="card-title">Jeżeli (IF)</h3>
+            <pre class="code st-stranger">
+JEŻELI temperatura większa od 30
+    wypisz: jest gorąco
+            </pre>
+        </div>
+
+        <div class="karta">
+            <h3 class="card-title">Jeżeli – inaczej (IF – ELSE)</h3>
+            <pre class="code st-stranger">
+JEŻELI użytkownik zalogowany
+    wyświetl: witaj
+W PRZECIWNYM RAZIE
+    wyświetl: dostęp zabroniony
+            </pre>
+        </div>
+
+        <div class="karta">
+            <h3 class="card-title">Jeżeli – inaczej jeśli – inaczej (IF – ELSE IF – ELSE)</h3>
+            <pre class="code st-stranger">
+JEŻELI liczba mniejsza od 0
+    wypisz: ujemna
+W PRZECIWNYM RAZIE JEŻELI liczba większa od 0
+    wypisz: dodatnia
+W PRZECIWNYM RAZIE
+    wypisz: zero
+            </pre>
+        </div>
+    </section>
+
+    <section class="blok">
+        <h2 class="naglowek">Ćwiczenia Interaktywne</h2>
+
+        <div class="karta">
+            <h3 class="card-title">Sprawdź liczbę</h3>
+            <input id="liczbaInput" type="number" class="inp" placeholder="Wpisz liczbę">
+            <button onclick="sprawdzLiczbe()" class="btn">Sprawdź</button>
+            <div id="wynik" class="wynik"></div>
+        </div>
+
+        <div class="karta">
+            <h3 class="card-title">Sprawdź dostęp</h3>
+            <input id="wiek" type="number" class="inp" placeholder="Wiek">
+            <label class="label st-stranger-label"><br>
+                <input id="dokument" type="checkbox"> Mam dokument
+            </label>
+            <button onclick="sprawdzDostep()" class="btn">Sprawdź</button>
+            <div id="wynik2" class="wynik"></div>
+        </div>
+
+        <div class="karta">
+            <h3 class="card-title">Imię</h3>
+            <input id="imieInput" type="text" class="inp" placeholder="Podaj imię">
+            <button onclick="sprawdzImie()" class="btn">Sprawdź</button>
+            <div id="wynik3" class="wynik"></div>
+        </div>
+    </section>
+
+    <section class="blok">
+        <h2 class="naglowek">Tryb Losowy & Mini-gra</h2>
+
+        <div class="karta">
+            <h3 class="card-title">Generator losowego warunku</h3>
+            <button onclick="losowyWarunek()" class="btn">Wygeneruj</button>
+            <div id="losowy" class="wynik"></div>
+        </div>
+
+        <div class="karta">
+            <h3 class="card-title">Mini gra: Odgadnij wynik IF</h3>
+            <div id="pytanie" class="pytanie st-stranger-question"></div>
+            <button onclick="sprawdzGreButton(true)" class="btn">Prawda</button>
+            <button onclick="sprawdzGreButton(false)" class="btn">Fałsz</button>
+            <div id="wynikGra" class="wynik"></div>
+        </div>
+    </section>
+
+    <footer class="footer">Daniel Trzeciński 2025</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
