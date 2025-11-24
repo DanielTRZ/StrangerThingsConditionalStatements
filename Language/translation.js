@@ -118,7 +118,7 @@ IF the temperature is greater than 30
         Red shadows are dancing around you!
     "
 
-IF the temperature is greater than or equal to 20 AND the temperature is less than <br>
+IF the temperature is greater than or equal to 20 AND the temperature is less than 
 or equal to 30
     DISPLAY: "
         🌫️ Normal world...
