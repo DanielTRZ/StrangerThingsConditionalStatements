@@ -118,7 +118,8 @@ IF the temperature is greater than 30
         Red shadows are dancing around you!
     "
 
-IF the temperature is greater than or equal to 20 AND the temperature is less than <br>or equal to 30
+IF the temperature is greater than or equal to 20 AND the temperature is less than <br>
+or equal to 30
     DISPLAY: "
         🌫️ Normal world...
         Warm, but Hawkins is still calm.
